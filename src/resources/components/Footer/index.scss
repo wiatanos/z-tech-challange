@@ -1,0 +1,11 @@
+@import './src/resources/assets/styles/variables';
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: $darker;
+    color: $text-color;
+}

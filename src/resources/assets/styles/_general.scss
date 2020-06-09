@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+  }
+  
+  html, body, #root {
+    height: 100%;
+    color: $text-color;
+    font-size: $base;
+  }
+  
+  #root{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    background-color: darken($darker, 4%);
+    font: $font
+  }

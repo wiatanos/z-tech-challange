@@ -1,0 +1,46 @@
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .wrapper {
+    max-width: 100%;
+    flex: 1 0 auto;
+  }
+  
+  [class*="col-"] {
+    margin-bottom: $margin;
+    min-height: $row;
+    line-height: $row;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  @media all and (min-width: 768px) {
+    
+    .row {
+      display: flex;
+      width: 100%;
+      padding: 10px;
+    }
+    
+    [class*="col-"] {
+      margin-right: $margin;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  
+  }
+  
+  @for $i from 1 through $cols {
+    .col-#{$i} {
+       flex: 0 0 $i*10%;
+    }
+  }
+  
+  @media all and (max-width: 960px) {
+    .col-resize {
+      flex: 0 0 100%;
+    }
+  }

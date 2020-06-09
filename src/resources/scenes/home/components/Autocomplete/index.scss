@@ -1,0 +1,69 @@
+@import './src/resources/assets/styles/variables';
+
+$background: rgba(58, 59, 60, 0.98);
+
+.search-container {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  max-width: 900px;
+}
+
+.search-field, .extra-field {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 55px;
+  border: 0;
+  padding: 10px 20px;
+  background: $background;
+  color: $text-color;
+  box-shadow: 0px 8px 15px rgba($text-color, 0.1);
+  transition: all 0.4s ease;
+  margin: 10px;
+  &:focus {
+    outline: none;
+    box-shadow: 0px 8px 15px rgba($text-color, 0.2  );
+    + .icons-container {
+      .icon-close {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .icon-search {
+        opacity: 0;
+        transform: translateX(200%);
+      }
+    }
+  }
+}
+
+.search-input-container, .search-field {
+  width: 100%;
+  margin: 0;
+}
+
+.btn-see-products{
+  background-color: $darker;
+  border: 1px solid $yellow;
+  border-radius: 3px;
+  padding: 10px;
+  color: $text-color;
+  align-self: center;
+}
+
+.autocomplete-dropdown-container {
+  width: 100%;
+  background-color: $background;
+}
+
+.suggestion-item {
+  border-top: solid 1px $text-color;
+  padding: 10px;
+  cursor: pointer;
+
+  span {
+    color: $text-color;
+  }
+}
